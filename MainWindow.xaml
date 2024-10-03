@@ -1,0 +1,41 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MojeDzwięki, Wykonał: PESEL"
+        Background="SeaGreen"
+        Height="400" Width="1200">
+    <DockPanel LastChildFill="True" Margin="25">
+        <StackPanel DockPanel.Dock="Left" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Button Height="70" Click="PreviousMusic_Click">
+                <Image Source="/obraz3.png"/>
+            </Button>
+        </StackPanel>
+        
+        <StackPanel DockPanel.Dock="Right" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Button Height="70" Click="NextMusic_Click">
+                <Image Source="/obraz2.png"/>
+            </Button>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" VerticalAlignment="Center" Margin="50,0,0,0">
+            <StackPanel>
+                <Image Source="/obraz.png" Height="200" Margin="20"/>
+                <DockPanel LastChildFill="False">
+                    <Label DockPanel.Dock="Left" Foreground="#61D918" x:Name="DownloadNumberLabel" FontSize="20">xxxxxxxxxx</Label>
+                    <Button DockPanel.Dock="Right" Click="DownloadButton_Click" Background="#61D918" FontWeight="Bold" FontSize="20" Padding="5" >Pobierz</Button>
+                </DockPanel>
+            </StackPanel>
+            <StackPanel>
+                <Label x:Name="ArtistLabel" FontSize="50" Foreground="White">Artist</Label>
+                <Label x:Name="AlbumTitleLabel" FontSize="30" FontStyle="Italic" Foreground="White">"Album Title"</Label>
+                <StackPanel Orientation="Horizontal">
+                    <Label x:Name="SongsNumberLabel" FontSize="20" Foreground="#61D918">Songs number</Label>
+                    <Label x:Name="YearLabel" FontSize="20" Foreground="#61D918" Margin="40,0,0,0">Release year</Label>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </DockPanel>
+</Window>
